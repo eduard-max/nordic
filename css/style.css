@@ -1,0 +1,282 @@
+/* Nordic Design – stilmall (svartvit) */
+
+:root {
+  --black: #000;
+  --ink: #141414;
+  --grey: #6b6b6b;
+  --line: #d6d6d6;
+  --white: #fff;
+  --paper: #f5f5f5;
+
+  --font: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --max: 72rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.05; }
+
+/* Hero med skogen */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  background: #050505 url("../images/forest.svg") center bottom / cover no-repeat;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem var(--gutter);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: linear-gradient(var(--white) 50%, transparent 50%);
+  box-shadow: inset 0 0 0 2px var(--white);
+}
+
+.site-header ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-header nav a:hover { color: var(--white); }
+
+.hero-text {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(3rem, 12vh, 9rem) var(--gutter) 0;
+  animation: appear 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero h1 {
+  max-width: 12ch;
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  letter-spacing: -0.035em;
+}
+
+.hero p {
+  max-width: 32rem;
+  margin: 1.5rem 0 2.25rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 14px #000, 0 0 4px #000;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to   { opacity: 1; transform: none; }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid var(--white);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Sektioner */
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(4rem, 9vw, 7rem) var(--gutter) 0;
+}
+
+.section h2 {
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  letter-spacing: -0.025em;
+  margin-bottom: 2.5rem;
+}
+
+/* Tjänster */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 2.5rem 3rem;
+  margin: 0;
+}
+
+.services div {
+  border-top: 2px solid var(--black);
+  padding-top: 1rem;
+}
+
+.services dt {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.services dd {
+  margin: 0;
+  color: var(--grey);
+}
+
+/* Projekt */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 2.5rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.swatch {
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1.1rem;
+}
+
+.swatch-pine {
+  background: radial-gradient(circle at 35% 65%, var(--white) 0 16%, transparent 16.5%), var(--black);
+}
+
+.swatch-fjord {
+  background: linear-gradient(180deg, var(--paper) 0 50%, var(--ink) 50% 100%);
+}
+
+.swatch-birch {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 46px, var(--black) 46px 52px),
+    var(--paper);
+}
+
+.project h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.project p {
+  margin: 0;
+  color: var(--grey);
+}
+
+/* Om oss */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 2rem 4rem;
+}
+
+.about-text p {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  max-width: 38rem;
+}
+
+@media (max-width: 720px) {
+  .about { grid-template-columns: 1fr; }
+  .about h2 { margin-bottom: 0; }
+}
+
+/* Kontakt – svart avslutning */
+.contact {
+  max-width: none;
+  margin-top: clamp(4rem, 9vw, 7rem);
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+  background: var(--black);
+  color: var(--white);
+}
+
+.contact > * {
+  max-width: calc(var(--max) - 2 * var(--gutter));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact address {
+  font-style: normal;
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+.contact address a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* Sidfot */
+.site-footer {
+  background: var(--black);
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #262626;
+  padding: 2rem var(--gutter) 3rem;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  max-width: calc(var(--max) - 2 * var(--gutter));
+  margin: 0 auto;
+}

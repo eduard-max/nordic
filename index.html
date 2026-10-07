@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nordic Design – designbyrå</title>
+  <meta name="description" content="Nordic Design är en designbyrå som skapar varumärken, webbplatser och förpackningar med nordisk enkelhet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FFFFFF'/><rect y='18' width='32' height='14' fill='%23000000'/></svg>">
+</head>
+<body>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <header class="site-header">
+      <a href="#" class="logo" aria-label="Nordic Design, till startsidan">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Nordic Design
+      </a>
+      <nav aria-label="Huvudmeny">
+        <ul>
+          <li><a href="#tjanster">Tjänster</a></li>
+          <li><a href="#projekt">Projekt</a></li>
+          <li><a href="#om">Om oss</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero-text">
+      <h1 id="hero-title">Design med ljus, luft och avsikt.</h1>
+      <p>Vi är en designbyrå med tolv personer som hjälper företag att bli tydliga – i varumärket, på webben och i förpackningen.</p>
+      <a class="button" href="#kontakt">Boka ett första möte</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="tjanster" class="section" aria-labelledby="tjanster-title">
+      <h2 id="tjanster-title">Det här gör vi</h2>
+      <dl class="services">
+        <div>
+          <dt>Varumärke</dt>
+          <dd>Logotyp, typografi, färg och tonläge. Ett system som håller i flera år, inte bara till nästa kampanj.</dd>
+        </div>
+        <div>
+          <dt>Webb och digitalt</dt>
+          <dd>Snabba, tillgängliga webbplatser som är lätta att uppdatera och lätta att hitta i.</dd>
+        </div>
+        <div>
+          <dt>Förpackning</dt>
+          <dd>Förpackningar som syns på hyllan och som tar hänsyn till material och återvinning.</dd>
+        </div>
+        <div>
+          <dt>Rum och skyltning</dt>
+          <dd>Skyltar, vägvisning och miljöer som får kontor och butiker att kännas genomtänkta.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="projekt" class="section" aria-labelledby="projekt-title">
+      <h2 id="projekt-title">Utvalda projekt</h2>
+      <ul class="projects">
+        <li class="project">
+          <div class="swatch swatch-pine" aria-hidden="true"></div>
+          <h3>Fjällgård Bryggeri</h3>
+          <p>Nytt varumärke och etiketter för ett småskaligt bryggeri i Jämtland.</p>
+        </li>
+        <li class="project">
+          <div class="swatch swatch-fjord" aria-hidden="true"></div>
+          <h3>Skärgårdstrafiken</h3>
+          <p>Tidtabeller och skyltar som går att läsa i regn, i motljus och på språng.</p>
+        </li>
+        <li class="project">
+          <div class="swatch swatch-birch" aria-hidden="true"></div>
+          <h3>Linne &amp; Lera</h3>
+          <p>Webbutik för hantverkare som säljer textil och keramik direkt till kund.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="om" class="section about" aria-labelledby="om-title">
+      <h2 id="om-title">Om oss</h2>
+      <div class="about-text">
+        <p>Nordic Design grundades med en enkel idé: att bra design ska vara lätt att förstå och lätt att leva med. Vi tar bort det som inte behövs så att det viktiga får plats.</p>
+        <p>Vi är tolv formgivare, utvecklare och projektledare som arbetar nära våra kunder – från första skiss till färdig leverans.</p>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact" aria-labelledby="kontakt-title">
+      <h2 id="kontakt-title">Hör av dig</h2>
+      <p>Berätta kort om ditt projekt så återkommer vi inom två arbetsdagar.</p>
+      <address>
+        <a href="mailto:hej@nordicdesign.se">hej@nordicdesign.se</a><br>
+        <a href="tel:+4681234567">08-123 45 67</a><br>
+        Exempelgatan 12, 111 22 Stockholm
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Nordic Design</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
